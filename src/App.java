@@ -21,17 +21,7 @@ public class App {
 
         System.out.println(separatedList);
 
-        int nice1 = Integer.parseInt(separatedList.get(2)) + 120;
-        int nice2 = Integer.parseInt(separatedList.get(5)) + 120;
-        int nice3 = Integer.parseInt(separatedList.get(8)) + 120;
-        int nice4 = Integer.parseInt(separatedList.get(11)) + 120;
-
         VectorHeap<Integer> myBinaryHeap = new VectorHeap<>();
-
-        myBinaryHeap.add(nice1);
-        myBinaryHeap.add(nice2);
-        myBinaryHeap.add(nice3);
-        myBinaryHeap.add(nice4);
 
         myBinaryHeap.showQueue();
         
