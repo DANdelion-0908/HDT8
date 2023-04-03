@@ -35,8 +35,4 @@ public class Process implements Comparable<Integer>{
     public int compareTo(Integer o) {
         return 0;
     }
-
-
-
-    
 }
