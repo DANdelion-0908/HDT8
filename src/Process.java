@@ -1,6 +1,6 @@
 package src;
 
-public class Process implements Comparable<Integer>{
+public class Process implements Comparable<Process>{
 
     private String name;
     private String user;
@@ -67,9 +67,9 @@ public class Process implements Comparable<Integer>{
      * @return The difference between the two integers.
      */
     @Override
-    public int compareTo(Integer integer) {
+    public int compareTo(Process other) {
         int thisNice = Integer.parseInt(this.nice);
-        int otherNice = integer;
+        int otherNice = Integer.parseInt(other.nice);
         return Integer.compare(thisNice, otherNice);
     }
 
