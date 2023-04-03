@@ -21,7 +21,7 @@ public class App {
 
         System.out.println(separatedList);
 
-        VectorHeap<Integer> myBinaryHeap = new VectorHeap<>();
+        VectorHeap<Process> myBinaryHeap = new VectorHeap<>();
 
         myBinaryHeap.showQueue();
         
