@@ -31,7 +31,10 @@ public class Process implements Comparable<Integer>{
     }
 
     @Override
-    public int compareTo(Integer o) {
-        return 0;
-    }
+    public int compareTo(Integer integer) {
+        int thisNice = Integer.parseInt(this.nice);
+        int otherNice = integer;
+        return Integer.compare(thisNice, otherNice);
+}
+
 }
