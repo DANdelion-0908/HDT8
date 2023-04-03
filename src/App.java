@@ -16,19 +16,12 @@ public class App {
         String line;
 
         while ((line = br.readLine()) != null) {
-            String[] dataStrings = line.split(",");
-
-            separatedList.add(dataStrings[0]);
-            separatedList.add(dataStrings[1]);
-            separatedList.add(dataStrings[2]);
+            separatedList.add(line);
         }
 
-        VectorHeap<Integer> myBinaryHeap = new VectorHeap<>();
+        System.out.println(separatedList);
 
-        myBinaryHeap.add(nice1);
-        myBinaryHeap.add(nice2);
-        myBinaryHeap.add(nice3);
-        myBinaryHeap.add(nice4);
+        VectorHeap<Process> myBinaryHeap = new VectorHeap<>();
 
         myBinaryHeap.showQueue();
         
@@ -48,5 +41,21 @@ public class App {
         for (String b : params) {
             int num = myHeap.removeTop();
         }
+    }
+       
+    private static ArrayList<String> priorityArrayList(ArrayList<String> arrayList) {
+        ArrayList<String> toReturn = new ArrayList<>();
+
+        for (String string : arrayList) {
+            String[] procString = string.split(",");
+
+            int plus = Integer.parseInt(procString[2]) + 120;
+            String line = procString[0] + procString[1] + plus;
+
+            toReturn.add(line);
+
+        }
+
+        return toReturn;
     }
 }
