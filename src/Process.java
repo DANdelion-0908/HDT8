@@ -1,3 +1,5 @@
+package src;
+
 public class Process implements Comparable<Integer>{
 
     private String name;
