@@ -28,6 +28,14 @@ public class App {
         br.close();
     }
 
+    /**
+     * It takes an ArrayList of strings, splits each string into an array of strings, adds 120 to the
+     * third element of the array, and then adds the first two elements of the array and the new third
+     * element to a new ArrayList of strings
+     * 
+     * @param arrayList ArrayList of strings that are formatted like this: "name,priority,time"
+     * @return The method is returning an ArrayList of Strings.
+     */
     private static ArrayList<String> priorityArrayList(ArrayList<String> arrayList) {
         ArrayList<String> toReturn = new ArrayList<>();
 

@@ -1,15 +1,15 @@
 package Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import src.VectorHeap;
 
 import java.util.ArrayList;
 
-import org.junit.Test;
-
-import src.VectorHeap;
 
 public class UnitTests {
 
+    // A test case for the add method.
     @Test
     public void testAdd() {
         VectorHeap<Integer> testVectorHeap = new VectorHeap<>();
@@ -20,12 +20,15 @@ public class UnitTests {
             testVectorHeap.add(5);
         }
         
+        for (int i = 0; i <= 4; i++) {
+            testVectorHeap.removeTop();
+        }
+
         tIntegers.add(testVectorHeap.peek());
-        
-        int intRemoved = testVectorHeap.removeTop();
 
 
-        assertEquals(intRemoved, tIntegers.get(0));
+
+        assertEquals(5, tIntegers.get(0));
     }
     
 }
