@@ -14,12 +14,14 @@ public class VectorHeap<E extends Comparable<E>> {
         priorityQueue.remove(integer);
     }
 
-    public void peek() {
+    public int peek() {
         System.out.println(priorityQueue.peek()); 
+        return priorityQueue.peek();
     }
 
-    public void removeTop() {
+    public int removeTop() {
         System.out.println(priorityQueue.poll()); 
+        return priorityQueue.poll();
     }
 
     public void showQueue() {
