@@ -10,7 +10,6 @@ public class App {
         
         System.out.println("Colas de prioridad \n");
         System.out.println("Leyendo archivo...");
-
         new ProgressBar();
         
         BufferedReader br = new BufferedReader(new FileReader("src/procesos.txt"));
