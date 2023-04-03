@@ -18,6 +18,7 @@ public class App {
 
         while ((line = br.readLine()) != null) {
             String[] dataStrings = line.split(",");
+            
             separatedList.add(dataStrings[0]);
             separatedList.add(dataStrings[1]);
             separatedList.add(dataStrings[2]);

@@ -5,7 +5,6 @@ public class Process implements Comparable<Integer>{
     private String name;
     private String user;
     private String nice;
-    private Comparable<Integer> priorityComparable;
 
     public String getName() {
         return name;
