@@ -7,6 +7,7 @@ public class ProgressBar {
     int progress = 0;
     int width = 50;
 
+    // It's a progress bar.
     public ProgressBar() {
         
     // Actualiza la barra de carga
