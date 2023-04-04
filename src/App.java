@@ -67,6 +67,9 @@ public class App {
         }
 
         myHeap.showQueue();
+        System.out.println("");
+
+        System.out.println("Usuarios ordenados: \n");
 
         while (myHeap.peek() != null) {
             for (String b : myStack) {
