@@ -21,9 +21,9 @@ public class App {
 
         System.out.println(separatedList);
 
-        VectorHeap<Process> myBinaryHeap = new VectorHeap<>();
+        ArrayList<String> newArr = priorityArrayList(separatedList);
 
-        myBinaryHeap.showQueue();
+        orderNums(newArr);
         
         br.close();
     }
@@ -50,5 +50,20 @@ public class App {
         }
 
         return toReturn;
+    }
+
+    private static void orderNums(ArrayList<String> params) {
+        VectorHeap<Integer> myHeap = new VectorHeap<>();
+
+        for (String s : params) {
+            String[] line = s.split(",");
+            int nice = Integer.parseInt(line[2]);
+
+            myHeap.add(nice);
+        }
+
+        for (String b : params) {
+            int num = myHeap.removeTop();
+        }
     }
 }
