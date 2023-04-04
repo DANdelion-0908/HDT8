@@ -20,7 +20,7 @@ public class VectorHeap<E extends Comparable<E>> {
     }
 
     public E removeTop() {
-        System.out.println(priorityQueue.poll()); 
+        System.out.println(priorityQueue.peek()); 
         return priorityQueue.poll();
     }
 

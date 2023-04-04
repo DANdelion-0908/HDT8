@@ -3,6 +3,7 @@ package src;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -10,7 +11,7 @@ public class App {
         
         System.out.println("Colas de prioridad \n");
         System.out.println("Leyendo archivo...");
-        new ProgressBar();
+        //new ProgressBar();
         
         BufferedReader br = new BufferedReader(new FileReader("src/procesos.txt"));
         String line;
@@ -43,7 +44,7 @@ public class App {
             String[] procString = string.split(",");
 
             int plus = Integer.parseInt(procString[2]) + 120;
-            String line = procString[0] + procString[1] + plus;
+            String line = procString[0] + "," + procString[1] + "," + plus;
 
             toReturn.add(line);
 
@@ -54,16 +55,33 @@ public class App {
 
     private static void orderNums(ArrayList<String> params) {
         VectorHeap<Integer> myHeap = new VectorHeap<>();
+        Stack<String> myStack = new Stack<>();
+        ArrayList<String> toPrint = new ArrayList<>();
 
         for (String s : params) {
             String[] line = s.split(",");
             int nice = Integer.parseInt(line[2]);
 
             myHeap.add(nice);
+            myStack.add(s);
         }
 
-        for (String b : params) {
-            int num = myHeap.removeTop();
+        myHeap.showQueue();
+
+        while (myHeap.peek() != null) {
+            for (String b : myStack) {
+                String[] line = b.split(",");
+                int num = Integer.parseInt(line[2]);
+
+                if (myHeap.peek() == num) {
+                    myHeap.removeTop();
+                    toPrint.add(b);
+                }
+            }
+        }
+
+        for (String print : toPrint) {
+            System.out.println(print);
         }
     }
 }
